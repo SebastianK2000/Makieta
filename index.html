@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zadanie Rekrutacyjne ASCO</title>
-    <link rel="stylesheet" href="css/boots">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -77,6 +77,14 @@
         section {
             padding: 20px;
             text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Wyśrodkowanie kolumn w sekcji */
+        }
+
+        .col-md-4 {
+            flex: 0 0 calc(33.33% - 20px); /* 3 kolumny na szerokości ekranu, z odstępami */
+            margin-bottom: 20px;
         }
 
         section div {
@@ -98,10 +106,10 @@
 
         .first, .second {
             list-style-type: none;
-            margin: 0;
+            margin: 0 0 0 -200px;
             padding: 0;
             text-align: left;
-            display: inline-block
+            display: inline-block;
         }
 
         .first li, .second li {
@@ -112,16 +120,19 @@
 
         footer form {
             display: flex;
-            align-items: center;
+            flex-direction: column; /* Ustawienie elementów w kolumnie */
+            align-items: flex-end; /* Wyrównanie elementów do prawej strony */
+            margin: 0 200px 0 0;
         }
 
         footer form label {
             color: #fff;
-            margin-right: 10px;
+            margin-right: 135px;
             font-size: 16px;
+            margin-bottom: 10px;
         }
 
-        footer form input[type="email"] {
+        footer form .email {
             padding: 10px;
             font-size: 16px;
             border: 1px solid #fff;
@@ -129,10 +140,15 @@
             background-color: #FFFFFF;
             color: #47525E;
             width: 250px;
-            margin-right: 10px;
+            margin-right: 20px;
+            margin-bottom: 1px; /* Dodane odstępy na dole pola email */
         }
 
-        footer form button[type="submit"] {
+        footer form .email-wrapper {
+            display: flex;
+        }
+
+        footer form .email-submit {
             padding: 10px 20px;
             font-size: 16px;
             border: none;
@@ -141,9 +157,10 @@
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin: 0 10px; /* Dodane odstępy między przyciskami */
         }
 
-        footer form button[type="submit"]:hover {
+        footer form .email-submit:hover {
             background-color: gray;
         }
 
@@ -173,18 +190,12 @@
             background-color: #C7D2DF;
         } 
 
-        .info {
-            display: flex;
-            align-items: flex-end;
-        }
-
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
-
 
         .logo {
             height: 30px;
@@ -214,8 +225,23 @@
             margin-right: 150px;
         }
 
-        
-    
+        /* Dodane style dla przycisków z Font Awesome */
+        .font {
+            display: flex;
+        }
+
+        .font button {
+            padding: 0px 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #47525E;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 10px; /* Dodane odstępy między przyciskami */
+        }
+
     </style>
 </head>
 <body>
@@ -223,43 +249,36 @@
         <header>
             <nav>
                 <div class="logo">Logo</div>
-                    <a class="nawigacja" href="#">Start</a>
-                    <a class="nawigacja" href="#">About</a>
-                    <a class="nawigacja" href="#">Features</a>
-                    <a class="nawigacja" href="#">Pricing</a>
+                <a class="nawigacja" href="#">Start</a>
+                <a class="nawigacja" href="#">About</a>
+                <a class="nawigacja" href="#">Features</a>
+                <a class="nawigacja" href="#">Pricing</a>
                 <div class="cart">Cart (1)</div>
             </nav>
         </header>
 
         <section class="columns">
-            <h1>Title 1</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="empty2"></div>
-                        <img src="" alt="">
-                        <h2>Lorem ipsum dolor</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula nec urna tincidunt tincidunt.</p>
-                    </div>
-        
-                    <div class="col-md-4">
-                        <div class="empty3"></div>
-                        <img src="" alt="">
-                        <h2>Lorem ipsum dolor</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula nec urna tincidunt tincidunt.</p>
-                    </div>
-        
-                    <div class="col-md-4">
-                        <div class="empty4"></div>
-                        <img src="" alt="">
-                        <h2>Lorem ipsum dolor</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula nec urna tincidunt tincidunt.</p>
-                    </div>
-                </div>
+            <!-- Kolumna 1 -->
+            <div class="col-md-4">
+                <div class="empty2"></div>
+                <h2>Lorem ipsum dolor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula nec urna tincidunt tincidunt.</p>
+            </div>
+
+            <!-- Kolumna 2 -->
+            <div class="col-md-4">
+                <div class="empty3"></div>
+                <h2>Lorem ipsum dolor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula nec urna tincidunt tincidunt.</p>
+            </div>
+
+            <!-- Kolumna 3 -->
+            <div class="col-md-4">
+                <div class="empty4"></div>
+                <h2>Lorem ipsum dolor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula nec urna tincidunt tincidunt.</p>
             </div>
         </section>
-        
-
         <footer>
             <div class="empty"></div>
             <div>
@@ -280,17 +299,21 @@
                     <li>Community</li>
                 </ul>
             </div>
-            <form action="(np. xyz.php)" method="xyz">
+            <form class="form1" action="(np. xyz.php)" method="xyz">
                 <label class="info" for="email">Get our newsletter</label>
                 <br>
                 <input class="email" type="email" id="email" name="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
+                <div class="email-wrapper">
+                    <button class="email-submit" type="submit">Subscribe</button>
+                </div>
                 
-                <button class="font" type="submit"><i class="fa-brands fa-square-facebook"></i></button>
-                <button class="font" type="submit"><i class="fa-brands fa-instagram"></i></button>
-                <button class="font" type="submit"><i class="fa-brands fa-snapchat"></i></button>
-                <button class="font" type="submit"><i class="fa-brands fa-twitter"></i></button>
-                <button class="font" type="submit"><i class="fa-brands fa-youtube"></i></button>
+                <div class="font">
+                    <button type="submit"><i class="fa-brands fa-square-facebook"></i></button>
+                    <button type="submit"><i class="fa-brands fa-instagram"></i></button>
+                    <button type="submit"><i class="fa-brands fa-snapchat"></i></button>
+                    <button type="submit"><i class="fa-brands fa-twitter"></i></button>
+                    <button type="submit"><i class="fa-brands fa-youtube"></i></button>
+                </div>
             </form>
         </footer>
     </main>
