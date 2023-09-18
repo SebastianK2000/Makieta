@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie Rekrutacyjne ASCO</title>
+    <link rel="stylesheet" href="css/boots">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        header {
+            background-color: #C7D2DF;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            background-color: #C7D2DF;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+        }
+
+        nav a {
+            display: flex;
+            overflow: hidden;
+            color: #47525E;
+            text-align: center;
+            text-decoration: none;
+            background-color: #C7D2DF;
+            font-size: 20px;
+        }
+
+        nav .logo {
+            margin-right: auto;
+        }
+
+        nav .cart {
+            margin-left: auto;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section div {
+            margin: 20px 0;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #47525E;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .first, .second {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            display: inline-block
+        }
+
+        .first li, .second li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        footer form {
+            display: flex;
+            align-items: center;
+        }
+
+        footer form label {
+            color: #fff;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        footer form input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            background-color: #FFFFFF;
+            color: #47525E;
+            width: 250px;
+            margin-right: 10px;
+        }
+
+        footer form button[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #47525E;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        footer form button[type="submit"]:hover {
+            background-color: gray;
+        }
+
+        .empty {
+            height: 30px;
+            width: 150px;
+            background-color: #79889b;
+            margin: 0 0 160px 100px;
+            border-radius: 5px;
+        }
+
+        .empty2 {
+            height: 150px;
+            width: 200px;
+            background-color: #C7D2DF;
+        }    
+
+        .empty3 {
+            height: 150px;
+            width: 200px;
+            background-color: #C7D2DF;
+        } 
+
+        .empty4 {
+            height: 150px;
+            width: 200px;
+            background-color: #C7D2DF;
+        } 
+
+        .info {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+
+        .logo {
+            height: 30px;
+            width: 100px;
+            background-color: #79889b;
+            margin-left: 50px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart {
+            height: 30px;
+            width: 100px;
+            margin-right: 50px;
+            background-color: #47525E;
+            text-align: center;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+
+        nav .nawigacja {
+            width: auto;
+            margin-right: 150px;
+        }
+
+        
+    
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <div class="logo">Logo</div>
+                    <a class="nawigacja" href="#">Start</a>
+                    <a class="nawigacja" href="#">About</a>
+                    <a class="nawigacja" href="#">Features</a>
+                    <a class="nawigacja" href="#">Pricing</a>
+                <div class="cart">Cart (1)</div>
+            </nav>
+        </header>
+
+        <section class="columns">
+            <h1>Title 1</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="empty2"></div>
+                        <img src="" alt="">
+                        <h2>Lorem ipsum dolor</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula nec urna tincidunt tincidunt.</p>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="empty3"></div>
+                        <img src="" alt="">
+                        <h2>Lorem ipsum dolor</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula nec urna tincidunt tincidunt.</p>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="empty4"></div>
+                        <img src="" alt="">
+                        <h2>Lorem ipsum dolor</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ligula nec urna tincidunt tincidunt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <footer>
+            <div class="empty"></div>
+            <div>
+                <ul class="first">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Features</li>
+                    <li>Pricing</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+            <div>
+                <ul class="second">
+                    <li>Blog</li>
+                    <li>Search</li>
+                    <li>T & Cs</li>
+                    <li>Privacy</li>
+                    <li>Community</li>
+                </ul>
+            </div>
+            <form action="(np. xyz.php)" method="xyz">
+                <label class="info" for="email">Get our newsletter</label>
+                <br>
+                <input class="email" type="email" id="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+                
+                <button class="font" type="submit"><i class="fa-brands fa-square-facebook"></i></button>
+                <button class="font" type="submit"><i class="fa-brands fa-instagram"></i></button>
+                <button class="font" type="submit"><i class="fa-brands fa-snapchat"></i></button>
+                <button class="font" type="submit"><i class="fa-brands fa-twitter"></i></button>
+                <button class="font" type="submit"><i class="fa-brands fa-youtube"></i></button>
+            </form>
+        </footer>
+    </main>
+</body>
+</html>
