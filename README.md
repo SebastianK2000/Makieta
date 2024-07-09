@@ -1,5 +1,9 @@
 # Makieta
 
+## Link to the page:
+
+https://first-mockup-not-responsible.netlify.app
+
 PL
 
 Makieta to przykład strony internetowej stworzonej przy użyciu HTML, CSS oraz biblioteki Bootstrap. Strona ta zawiera pasek nawigacji, sekcje z treściami oraz stopkę z formularzem subskrypcji newslettera.
